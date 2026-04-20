@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PIX-X — Almost Ready</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap" rel="stylesheet">
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{
+  height:100%;
+  font-family:'Golos Text',sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ── Page ── */
+.page{
+  width:100%;
+  min-height:100vh;
+  background:url('back.png') center bottom / cover no-repeat;
+  display:flex;
+}
+
+/* ── Layout ── */
+.layout{
+  display: grid;
+  width:100%;
+}
+
+/* ── Left column ── */
+.col-left{
+  flex:0 0 100%;
+  display:flex;
+  flex-direction:column;
+  padding:80px;
+}
+
+.headline{
+  font-size:clamp(5rem,12vw,29rem);
+  font-weight:900;
+  color:#ACE59E;
+  line-height:.87;
+  letter-spacing:-.03em;
+  text-transform:uppercase;
+}
+
+.body-copy{
+  margin-top:24px;
+  font-size:clamp(3.4rem,1.35vw,1.3rem);
+  color:#2C2C2C;
+  line-height:1.1;
+  max-width:700px;
+}
+
+.body-copy strong{font-weight:700}
+.body-copy em{font-style:italic;font-weight:800}
+
+/* ── Right column ── */
+.col-right{
+  flex:0 0 100%;
+  display:flex;
+  align-items:flex-end;
+  justify-content:flex-start;
+  padding:80px;
+}
+
+/* CTA + Logo aligned */
+.cta-wrap{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  width:100%;
+  max-width:100%;
+}
+
+/* CTA */
+.cta{
+  font-size:clamp(3.4rem,1.3vw,1.25rem);
+  color:#2C2C2C;
+  line-height:1.1;
+}
+
+.cta .cta-line{display:block}
+.cta .cta-bold{font-weight:800;font-style:italic}
+
+.cta a{
+  display:inline-block;
+  margin-top:20px;
+  color:#2C2C2C;
+  text-decoration:none;
+  font-size:clamp(2.1rem,1.05vw,1rem);
+  font-weight:500;
+  transition:opacity .2s;
+}
+
+.cta a:hover{opacity:.65}
+
+/* Logo */
+.logo img{
+  width:120px;
+  height:auto;
+}
+
+/* ── Tablet ── */
+@media(max-width:1023px){
+  .layout{
+    flex-direction:column;
+  }
+
+  .col-left{
+    padding:60px 60px 0;
+  }
+
+  .headline{
+    font-size:clamp(4rem,15vw,18rem);
+    text-align: center;
+  }
+
+.body-copy{
+  text-align: center;
+  font-size:clamp(3.5rem,1.35vw,1.3rem);
+  max-width:100%;
+}
+  .col-right{
+    padding:40px 60px 60px;
+    justify-content:center;
+  }
+
+  .cta{
+  font-size:clamp(3.5rem,1.3vw,1.25rem);
+}
+
+  .cta-wrap{
+    flex-direction:column;
+    align-items:center;
+    gap:50px;
+    text-align:center;
+  }
+}
+
+/* ── Mobile ── */
+@media(max-width:599px){
+  .col-left{
+    padding:30px 20px 0;
+  }
+
+  .headline{
+    font-size:clamp(2.8rem,18vw,12rem);
+    text-align: center;
+  }
+
+.body-copy{
+ text-align: center;
+ font-size:clamp(2.5rem,1.35vw,1.3rem);
+ max-width:100%;
+}
+  .col-right{
+    padding:20px 20px 60px;
+  }
+
+    .cta{
+  font-size:clamp(2.5rem,1.3vw,1.25rem);
+}
+
+.cta a{
+  font-size:clamp(1.8rem,1.05vw,1rem);
+}
+
+  .logo img{
+    width:80px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+  <div class="layout">
+
+    <!-- Left -->
+    <div class="col-left">
+      <h1 class="headline">Almost<br>Ready.</h1>
+
+      <p class="body-copy">
+        We're building something to help you <strong>grow</strong>, and 
+        <em>we're nearly there.</em>
+      </p>
+    </div>
+
+    <!-- Right -->
+    <div class="col-right">
+      <div class="cta-wrap">
+
+        <div class="cta">
+          <span class="cta-line">Can't wait? Reach out.</span>
+          <span class="cta-line cta-bold">Let's start now.</span>
+          <a href="mailto:contact@pix-x.com">Contact@pix-x.com</a>
+        </div>
+
+        <div class="logo">
+          <img src="PIX-X-LOGO.svg" alt="PIX-X">
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
